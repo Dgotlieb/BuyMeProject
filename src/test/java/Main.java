@@ -21,7 +21,7 @@ public class Main extends BasePage {
         String type = getData("browserType");
         if(type.equals("Chrome")){
             System.setProperty("webdriver.chrome.driver", Constants.CHROMEDRIVER_PATH);
-            driver = new ChromeDriver();
+            driver = DriverSingelton.getDriverInstance();
         }else if(type.equals("FF")){
             System.setProperty("webdriver.firefox.driver", "C:\\geckodriver\\geckodriver.exe");
             driver = new FirefoxDriver();
