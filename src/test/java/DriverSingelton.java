@@ -3,8 +3,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class DriverSingelton {
 
+    static ChromeDriver driver = null;
+
     public static WebDriver getDriverInstance(){
-        ChromeDriver driver = new ChromeDriver();
         if(driver == null){
             System.setProperty("webdriver.chrome.driver", Constants.CHROMEDRIVER_PATH);
             driver = new ChromeDriver();
